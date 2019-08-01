@@ -1,2 +1,1 @@
-# WayFarer-v2
-Andela challenge
+# fixing footer padding
