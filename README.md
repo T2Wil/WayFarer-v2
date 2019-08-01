@@ -1,2 +1,2 @@
 # WayFarer-v2
-Andela challenge
+WayFarer is a public bus transportation booking service.  
