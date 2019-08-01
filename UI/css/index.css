@@ -1,0 +1,149 @@
+html,body{
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+    padding:0;
+}
+.header{
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.header .logo{
+    text-align: center;
+    color: #0066FF; 
+  	font-family:arial; 
+  	font-size: 50px;
+}
+.header .search input{
+    width: 400px;
+    padding: 10px;
+}
+.header .search input , button{
+    flex-grow: 1;
+    border: none;
+    border: 1px rgba(166,166,166) solid;
+    border-radius: 5px;
+    height: 30px;
+}
+.header .search button{
+    background-color: rgb(152, 152, 199);
+}
+.header .search button:hover , a:hover{
+    font-weight: bold;
+    cursor: pointer;
+}
+.header .signin-signup{
+    display:flex;
+    flex-direction: column;
+}
+.header .signin-signup a{
+    padding-bottom: 5px;
+    margin-right: 10px;
+}
+
+.container{
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    display: grid;
+    grid-template-rows: 1fr 20px;
+}
+.container .content{
+    height: 100%;
+    width: 100%;
+}
+.container .content .trips ul{
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin-top: 30px;
+    border: 1px rgba(166,166,166) solid;
+    padding: 10px;
+}
+.container .content .trips ul li{
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+.container .content .trips ul li ul{
+    display: flex;
+    flex-direction: column;
+    border: none;
+}
+.container .content .trips ul li ul li{
+    border: 1px rgba(166,166,166) solid;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    font-weight: normal;
+    text-transform: none;
+}
+.container .footer{
+    background-color: rgb(149, 179, 149);
+}
+ul {
+    list-style: none;
+}
+a{
+	text-decoration: none;
+	color: blue;
+}
+@media(max-width:768px){
+    html,body{
+        padding:0;
+        margin:0;
+    }
+    .header{
+        height: 150px;
+        display: flex;
+        flex-direction: column;   
+        flex-wrap: wrap;
+    }
+    .header .signin-signup{
+        flex-direction: row;
+    }
+    .container{
+        width: 700px;
+        margin-left: 30px;
+        margin-top: 20px;
+    }
+    .container .content .trips ul{
+        display: flex;
+        font-size: 15px;
+    }
+    .header .search input{
+        width: 200px;
+        padding: 10px;
+    }
+}
+@media(max-width:480px){
+    html,body{
+        padding:0;
+        margin:0;
+        width: 400px;
+        margin: 0 auto;
+
+    }
+    .header{
+        height: 150px;
+        display: flex;
+        flex-direction: column;   
+        flex-wrap: wrap;
+    }
+    .header .signin-signup{
+        flex-direction: row;
+    }
+    .container{
+        width: 200px;
+    }
+    .container .content .trips ul{
+        display: flex;
+        font-size: 10px;
+    }
+    .header .search input{
+        width: 200px;
+        padding: 10px;
+    }
+}
