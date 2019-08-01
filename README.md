@@ -1,1 +1,1 @@
-# fixing footer padding
+# fix footer padding
