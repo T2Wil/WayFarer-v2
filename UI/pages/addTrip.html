@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+  	<meta name="description" content="transportation booking website">
+  	<meta name="keywords" content="transport,user">
+  	<meta name="author" content="T william">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WAYFARER | ALL USERS TRIPS</title>
+    <link rel="stylesheet" href="../css/addTrip.css">
+    <link href="https://fonts.googleapis.com/css?family=Archivo:500|Open+Sans:300,700" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+
+        <div class="main_nav">
+            <div class="logo"><a href="./index.html">WayFarer</a></div>
+            <div class="box">
+                <ul>
+                    <li>
+                        <img src="../images/home.svg" alt="" class="icon">
+                        <a href="./admin.html">Home</a></li>
+                    <li>
+                        <img src="../images/booking.svg" alt="" class="icon">
+                        <a href="bookings_admin.html">Bookings</a>
+                    </li>
+                    <li>
+                        <img src="../images/logout.svg" alt="" class="icon">
+                        <a href="index.html">Logout</a>
+                    </li>
+                </ul>   
+            </div>
+        </div>
+        <p>
+            CREATE A NEW TRIP
+        </p>
+        <div class="create_trip">
+            <div id="create_trip">
+                <input type="text" name="destination_country" placeholder="Destination country" autofocus>
+                <input type="text" name="origin" placeholder="origin">
+                <input type="text" name="destination" placeholder="Destination">
+                <input type="date" name="date" placeholder="Date">
+                <input type="text" name="Fare" placeholder="Fare">
+                <a href="./admin.html">
+                    <span class="btn">Save Trip</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

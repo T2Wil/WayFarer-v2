@@ -33,7 +33,7 @@ body {
     display: inline-block;
 }
 .main_nav .logo{
-    color: #a72461;
+    color: #a72461; 
     font-family:arial; 
     font-size: 50px;
 }
@@ -46,42 +46,51 @@ li img{
     height: 20px;
     width: 20px;
 }
-.content-trips{
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    text-align: center;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-.content-trips div{
-    background: #f5dbce;
-    height: 150px;
-    width: 150px;
-    border: solid 1px yellow;
-    padding: 0.5rem;
-    margin: 0.2rem auto;
-}
-.content-trips div button{
-    background: #ff935c;
-    border-style: none;
-    border-radius: 5px;
+
+
+
+.container .create_trip input{
+	display: block;
+	margin: 10px auto;
+	width: 70%;
+	height: 30px;
+	padding-left: 20px;
+	border: none;
+	border-bottom: 1px #ff935c solid;
 }
 
-.footer{
-    width: 100%;
-    height: 2rem;
-    text-align: center;
+ p{
+	text-align: center;
 }
 
-.icon{
-    position: relative;
-    top: 5px;
+.container .create_trip .btn{
+	display: block;
+	width: 70.7%;
+	margin: 20px auto;
+	border-style: none;
+	border-radius: 15px;
+	height: 25px;
+	background-color: #ff935c;
+	text-align: center;
+	color: black;
+	padding: 5px 0px;
+}
+
+.container .create_trip .btn:hover{
+	font-weight: bolder;
+	cursor: pointer;
+}
+
+li{
+    list-style: none;
 }
 a{
     text-decoration: none;
     color: #a72461;
-
+}
+.icon{
+    position: relative;
+    top: 5px;
 }
 @media(max-width: 720px){
     .main_nav{

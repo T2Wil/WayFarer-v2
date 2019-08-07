@@ -1,172 +1,107 @@
 html,body{
     height: 100%;
     width: 100%;
+    padding: 0;
     margin: 0;
 }
-.container{
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+   }
+   
+   h1, h2, h3, h4, h5, h6 {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 500;
+   }
+.container {
+    width: 100%;
     height: 100%;
-    width:95%;
-    margin:0 auto;
-    display:grid;
-    grid-template-rows: 150px 1fr 40px;
-    grid-template-columns: auto auto;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
 }
-.container .header{
-    width:90%;
-    margin:0 auto;
-    grid-column: 1/-1;
-    height: 150px;
+
+
+.container .main_nav{
+    background:#f9e090;
+    height: 10%;
+    margin: 0;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+}
+.main_nav .box{
+    margin-right: 2rem;
+    display: inline-block;
+}
+.main_nav .logo{
+    color: #a72461; 
+    font-family:arial; 
+    font-size: 50px;
+}
+
+ul li{
+    display: inline-block;
+    margin-left: 2rem;
+}
+li img{
+    height: 20px;
+    width: 20px;
+}
+.content-trips{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
-.container .header .logo{
-    text-align: center;
-    color: #0066FF; 
-  	font-family:arial; 
-  	font-size: 50px;
+.content-trips div{
+    background: #f5dbce;
+    height: 150px;
+    width: 150px;
+    border: solid 1px yellow;
+    padding: 0.5rem;
+    margin: 0.2rem auto;
 }
-.container .header .search input{
-    width: 400px;
-    padding: 10px;
-}
-.container .header .search input , button{
-    flex-grow: 1;
-    border: none;
-    border: 1px rgba(166,166,166) solid;
+.content-trips div button{
+    background: #ff935c;
+    border-style: none;
     border-radius: 5px;
-    height: 30px;
+    color: #a72461
 }
-.container .header .search button{
-    background-color: rgb(152, 152, 199);
-}
-.container .header .search button:hover , a:hover{
+button:hover , a:hover{
     font-weight: bold;
     cursor: pointer;
 }
-.container .header .image{
+.footer{
+    width: 100%;
+    height: 2rem;
+    text-align: center;
+}
+
+.icon{
     position: relative;
-}
-.container .header .image img{
-    position:absolute;
-    margin-top:-20px;
-    margin-left: -55px;
-    border-radius: 50%;
-}
-.container .bookings{
-    grid-column: 1/2;
-    display: flex;
-    flex-direction: column;
-    overflow-y: scroll;
-}
-ul{
-    display: flex;
-    justify-content: space-between;
-    padding: 0;
-    margin-top: 30px;
-    border: 1px rgba(166,166,166) solid;
-    padding: 10px;
-}
-ul li{
-    font-weight: bolder;
-    text-transform: uppercase;
-}
-ul li ul{
-    display: flex;
-    flex-direction: column;
-    border: none;
-}
-ul li ul li{
-    border: 1px rgba(166,166,166) solid;
-    border-radius: 5px;
-    padding: 5px;
-    margin: 5px;
-    font-weight: normal;
-    text-transform: none;
-}
-.container .trips{
-    display: flex;
-    flex-direction: column;
-    overflow-y: scroll;
-}
-.container .footer{
-    grid-column: 1/-1;
-    background-color: rgb(187, 179, 179);
-    padding-bottom: 5px;
-    padding-top: 15px;
-    
+    top: 5px;
 }
 a{
     text-decoration: none;
-    color:blue;
+    color: #a72461;
 }
-ul{
-    list-style: none;
-}
-@media(max-width:992px){
-    html,body{
-        width:100%;
-        height:100%;
-        margin:0;
-        padding:0;
-    }
-    .container{
-        height:100%;
-        width: 100%;
-        margin:0 auto;
-        display: grid;
-        grid-template-rows: 200px 1fr 1fr;/*here*/
-        grid-template-columns: 650px;/*here*/
-    }
-    .container .header{
+@media(max-width: 720px){
+    .main_nav{
         display: flex;
         flex-direction: column;
     }
-    .container .header .logo{
-        margin-left: -70px;
+    .main_nav .logo{
+        margin-top: 0.5rem;
+        margin-left: 8rem;
+        font-size: 13px;
     }
-    .container .header .search{
-        order: 1;
-    }
-    .container .bookings{
-        grid-column: 1/-1;
-    }
-    .container .trips{
-        grid-column: 1/-1;
-    }
-
-}
-@media(max-width:480px){
-    html,body{
-        width:100%;
-        height:100%;
-        margin:0;
-        padding:0;
-    }
-    .container{
-        height:100%;
-        width: 450px;
-        margin:0 auto;
-        display: grid;
-        grid-template-rows: 200px 1fr 1fr;
-    }
-    .container .header{
+    .main_nav .box{
         display: flex;
-        flex-direction: column;
+         justify-content: space-between;
     }
-    .container .header .logo{
-        margin-left: -70px;
+    .main_nav .box ul li{
+     display: inline;
+     margin-left: 0.5rem;
     }
-    .container .header .search{
-        order: 1;
-    }
-    .container .bookings{
-        grid-column: 1/-1;
-    }
-    .container .trips{
-        grid-column: 1/-1;
-    }
-
-}
+ }
