@@ -1,3 +1,4 @@
+/* eslint-disable radix */
 import Storage from './Storage';
 import { generateId } from '../helpers/util';
 
@@ -37,13 +38,23 @@ class Trip {
     this.storage.addTrip(this.getTrip());
   }
 
-  findTrip(id) {
+  findTrip(tripId) {
     const trips = this.storage.getTrips();
+    console.log(`Trips : ${JSON.stringify(trips)}`);
+    let tripFound = null;
     trips.forEach((trip) => {
-      if (trip.id === id) {
-        console.log(trip);
+      console.log(`trip : ${JSON.stringify(trip.id)}
+      tripId : ${tripId}
+      type of trip.id ${typeof (trip.id)}
+      type of tripId ${typeof (tripId)}`);
+      if (trip.id === parseInt(tripId)) {
+        console.log('inside');
+        tripFound = trip;
       }
     });
+    console.log(`tripFound : ${JSON.stringify(tripFound)}`);
+
+    return tripFound;
   }
 }
 

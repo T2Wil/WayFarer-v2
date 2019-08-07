@@ -34,6 +34,10 @@ class Storage {
 
   getTrips() { return this.trips; }
 
+  getTrip(trip_id) {
+    this.trips.find(trip => trip.id === trip_id);
+  }
+
   getBookings() { return this.bookings; }
 
   cancelTrip(trip) {

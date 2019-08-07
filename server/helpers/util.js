@@ -5,9 +5,10 @@ export const generateToken = (payload) => {
   const SECRET_KEY = 'secret_key';
   return jwt.sign(payload, SECRET_KEY,
     {
-      expiresIn: '1h',
+      expiresIn: '24h',
     });
 };
+
 export const verifyToken = (req, res, next) => {
   const SECRET_KEY = 'secret_key';
   const headerAuth = req.headers.authorization || req.headers.Authorization;
