@@ -1,9 +1,9 @@
 import express from 'express';
-import { getTrips, getTrip } from '../controllers/trips';
+import { getTrip, createTrip } from '../controllers/trips';
 import { verifyToken } from '../helpers/util';
 
 const router = express.Router();
 
-router.post('/', verifyToken, getTrips);
+router.post('/', verifyToken, createTrip);
 router.get('/:id', verifyToken, getTrip);
 export default router;
