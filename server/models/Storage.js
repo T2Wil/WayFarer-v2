@@ -33,7 +33,7 @@ class Storage {
   getUsers() { return this.users; }
 
   getTrips() { return this.trips; }
-
+  
   getTrip(trip_id) {
     this.trips.find(trip => trip.id === trip_id);
   }

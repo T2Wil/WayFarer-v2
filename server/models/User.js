@@ -2,6 +2,7 @@
 import Storage from './Storage';
 import { generateId } from '../helpers/util';
 
+
 class User {
   constructor() {
     this.id = null;
@@ -22,6 +23,7 @@ class User {
     this.first_name = first_name;
     this.last_name = last_name;
     this.pswd = password;
+
     this.is_admin = is_admin;
   }
 
@@ -73,6 +75,7 @@ class User {
       this.last_name = user.last_name;
       this.email = user.email;
       this.pswd = user.password;
+
       this.is_admin = user.is_admin;
       return true;
     }

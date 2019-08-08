@@ -15,6 +15,7 @@ class Trip {
 
   setTrip(trip) {
     this.id = trip.id || generateId();
+
     this.seating_capacity = trip.seating_capcity;
     this.origin = trip.origin;
     this.destination = trip.destination;
@@ -55,6 +56,7 @@ class Trip {
     console.log(`tripFound : ${JSON.stringify(tripFound)}`);
 
     return tripFound;
+
   }
 }
 
