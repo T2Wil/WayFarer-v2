@@ -1,26 +1,8 @@
 /* eslint-disable camelcase */
 class Storage {
   constructor() {
-    this.users = [
-      {
-        id: 1234,
-        first_name: 'William',
-        last_name: 'ishimwe',
-        email: 'ishimwewil005@gmail.com',
-        password: '1234',
-        is_admin: false,
-      },
-    ];
-    this.trips = [
-      {
-        id: 123,
-        seating_capacity: 30,
-        origin: 'kigali',
-        destination: 'kampala',
-        trip_date: '01/08/2019',
-        fare: 2000,
-      },
-    ];
+    this.users = [];
+    this.trips = [];
     this.bookings = [];
   }
 
@@ -32,6 +14,18 @@ class Storage {
 
   getUsers() { return this.users; }
 
+  findUser(email,password){
+    console.log(`users : ${ JSON.stringify(this.users)}`);
+    const numberOfUsers = this.users.length;
+    for (let i = 0; i < numberOfUsers; i += 1) {
+      if (this.users[i].email === email) {
+        if (this.users[i].password === password) {
+          return this.users[i];
+        }
+      }
+    }
+    return null;
+  }
   getTrips() { return this.trips; }
   
   getTrip(trip_id) {
@@ -47,6 +41,27 @@ class Storage {
 
   cancelBooking(index_of_booking) {
     this.bookings.splice(index_of_booking, 1);
+  }
+
+  findTrip(tripId) {
+    const numberOfTrips = this.trips.length;
+
+    for (let i = 0; i < numberOfTrips; i += 1) {
+       if (this.trips[i].id === tripId) {
+        return this.trips[i];
+      }
+    }
+    return false;
+  }
+  matchUserByEmail(email) {
+    const numberOfUsers = this.users.length;
+    console.log( `number of users: ${numberOfUsers}`);
+    for (let i = 0; i < numberOfUsers; i += 1) {
+      if (this.users[i].email === email) {
+        return this.users[i];
+      }
+    }
+    return null;
   }
 }
 
