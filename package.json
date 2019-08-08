@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "dev": "nodemon --exec babel-node ./server/server.js",
-    "start": "babel-node --presets es2015 auth.js",
+    "start": "babel-node --presets es2015 ./server/server.js",
     "test": "mocha server/test/model/admin.js --require @babel/polyfill --require @babel/register --timeout 10000 --exit"
   },
   "repository": {
@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/T2Wil/WayFarer-v2#readme",
   "devDependencies": {
-    "@babel/cli": "^7.5.5",
+    
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.2.0",
     "eslint-plugin-import": "^2.18.2",
@@ -27,6 +27,7 @@
     "nodemon": "^1.19.1"
   },
   "dependencies": {
+    "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
     "@babel/node": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
