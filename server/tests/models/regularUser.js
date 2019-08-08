@@ -2,8 +2,7 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-expressions */
 import chai from 'chai';
-import RegularUser from '../models/RegularUser';
-
+import RegularUser from '../../model/RegularUser';
 
 const { expect } = chai;
 const user = new RegularUser();

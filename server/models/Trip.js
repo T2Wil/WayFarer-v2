@@ -1,5 +1,6 @@
+/* eslint-disable radix */
 import Storage from './Storage';
-import Utils from '../helpers/util';
+import { generateId } from '../helpers/util';
 
 class Trip {
   constructor() {
@@ -10,11 +11,11 @@ class Trip {
     this.trip_date = null;
     this.fare = null;
     this.storage = new Storage();
-    this.utils = new Utils();
   }
 
   setTrip(trip) {
-    this.id = trip.id || this.utils.generateId();
+    this.id = trip.id || generateId();
+
     this.seating_capacity = trip.seating_capcity;
     this.origin = trip.origin;
     this.destination = trip.destination;
@@ -38,13 +39,24 @@ class Trip {
     this.storage.addTrip(this.getTrip());
   }
 
-  findTrip(id) {
+  findTrip(tripId) {
     const trips = this.storage.getTrips();
+    console.log(`Trips : ${JSON.stringify(trips)}`);
+    let tripFound = null;
     trips.forEach((trip) => {
-      if (trip.id === id) {
-        console.log(trip);
+      console.log(`trip : ${JSON.stringify(trip.id)}
+      tripId : ${tripId}
+      type of trip.id ${typeof (trip.id)}
+      type of tripId ${typeof (tripId)}`);
+      if (trip.id === parseInt(tripId)) {
+        console.log('inside');
+        tripFound = trip;
       }
     });
+    console.log(`tripFound : ${JSON.stringify(tripFound)}`);
+
+    return tripFound;
+
   }
 }
 

@@ -1,8 +1,26 @@
 /* eslint-disable camelcase */
 class Storage {
   constructor() {
-    this.users = [];
-    this.trips = [];
+    this.users = [
+      {
+        id: 1234,
+        first_name: 'William',
+        last_name: 'ishimwe',
+        email: 'ishimwewil005@gmail.com',
+        password: '1234',
+        is_admin: false,
+      },
+    ];
+    this.trips = [
+      {
+        id: 123,
+        seating_capacity: 30,
+        origin: 'kigali',
+        destination: 'kampala',
+        trip_date: '01/08/2019',
+        fare: 2000,
+      },
+    ];
     this.bookings = [];
   }
 
@@ -15,6 +33,10 @@ class Storage {
   getUsers() { return this.users; }
 
   getTrips() { return this.trips; }
+  
+  getTrip(trip_id) {
+    this.trips.find(trip => trip.id === trip_id);
+  }
 
   getBookings() { return this.bookings; }
 
