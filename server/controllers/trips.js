@@ -11,7 +11,7 @@ export const createTrip = (req, res) => {
   const { decoded } = req;
   const { email } = decoded;
   const { is_admin } = decoded;
-  if(is_admin){
+  if(is_admin === 'true'){
     const newTrip = {
       id: req.body.id,
       seating_capacity: req.body.seating_capacity,
