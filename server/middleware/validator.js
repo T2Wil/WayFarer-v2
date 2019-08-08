@@ -14,7 +14,7 @@ export const validateSignup = (req, res, next) => {
   if (error) {
     res.status(400).json({
       status: 'error',
-      error: 'Invalid parameters',
+      error: error.details[0].message,
     });
   } else { next(); }
 };
@@ -29,7 +29,7 @@ export const validateSignin = (req, res, next) => {
   if (error) {
     res.status(400).json({
       status: 'error',
-      error,
+      error: error.details[0].message,
     });
   } else next();
 };

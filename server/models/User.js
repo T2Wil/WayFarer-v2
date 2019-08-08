@@ -43,6 +43,7 @@ class User {
 
   matchUser(email, password) {
     const users = this.storage.getUsers();
+    console.log(`users : ${ users}`);
     const numberOfUsers = users.length;
     for (let i = 0; i < numberOfUsers; i += 1) {
       if (users[i].email === email) {
@@ -54,16 +55,9 @@ class User {
     return null;
   }
 
-  matchUserByEmail(email) {
-    const users = this.storage.getUsers();
-    const numberOfUsers = users.length;
-    for (let i = 0; i < numberOfUsers; i += 1) {
-      if (users[i].email === email) {
-        return users[i];
-      }
-    }
-    return null;
-  }
+  // matchUserByEmail(email) {
+  //   this.storage.matchUserByEmail(email);
+  // }
 
   signin(email, password) {
     const user = this.matchUser(email, password);
