@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 import chai from 'chai';
-import Admin from '../../model/Admin';
-import Storage from '../../model/Storage';
+import Admin from '../models/Admin';
+import Storage from '../models/Storage';
 
 const { expect } = chai;
 const admin = new Admin();
